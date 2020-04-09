@@ -8,7 +8,7 @@ router.use(express.json());
 
 router.get("/", (req, res) => {
   // read the message from the Environment
-  const message = this.process.env.MESSAGE || "hello from the yokel host"
+  const message = process.env.MESSAGE || "hello from the yokel host"
   //return the message
   res.status(200).json({ api: "up", message });
 });
